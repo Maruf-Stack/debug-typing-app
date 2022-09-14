@@ -25,7 +25,7 @@ const typeController = (e) => {
   const newLetter = e.key;
 
   // Handle backspace press
-  if (newLetter == "Backspace") {
+  if (newLetter === "Backspace") {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
@@ -113,13 +113,13 @@ const start = () => {
     // finished timer
     if (count === 0) {
       // -------------- START TYPING -----------------
-      display.addEventListener("keydown", typeController);
+      document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
-      display.setAttribute("contenteditable", "true")
+      display.classList.remove("inactive");
 
-      // clearInterval(startCountdown);
-      // startTime = parseInt(new Date().getTime());
-      setInterval()
+      clearInterval(startCountdown);
+      startTime = new Date().getTime();
+
     }
     count--;
   }, 1000);
@@ -132,9 +132,15 @@ startBtn.addEventListener("click", start);
 displayHistory();
 
 // Show typing time spent
+// setInterval(() => {
+//   const currentTime = new Date().getSeconds();
+//   document.getElementById("show-time").innerText = `${startTime ? currentTime : 0} seconds`;
+// }, 1000);
+
 setInterval(() => {
   const currentTime = new Date().getTime();
+  const timeSpent = Math.round((currentTime - startTime) / 1000);
 
-  const timeSpent = (currentTime - startTime) / 1000;
+
   document.getElementById("show-time").innerText = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
