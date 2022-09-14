@@ -79,6 +79,7 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   // show result
+  resultModal.classList.add('modal-result')
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
