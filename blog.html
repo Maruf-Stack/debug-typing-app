@@ -6,17 +6,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- google-fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oswald:wght@600&display=swap"
+        rel="stylesheet">
     <!-- bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 </head>
 
 <body>
-    <section class="container">
+    <section class="container mt-5">
         <div class="row">
-            <div class="col-md-1">
+            <div>
+                <h2 class="fw-bold text-danger">
+                    Question 1 : What is the difference between Local Storage and Session Storage?
+                </h2>
+                <h4>
+                    <span class="fs-2 fw-bold">Ans : </span><strong>Local storage </strong>: Local storage is
+                    permenent.This read-only interface property
+                    provides access to
+                    the Document's local storage object, the stored data is stored across browser sessions.<br>
+                    <strong>Session storage </strong> : Similar to sessionStorage, except that localStorage data gets
+                    cleared when the
+                    page session ends that is when the page is closed. It is cleared when the last “private” tab of a
+                    browser is closed.
 
+                </h4>
+            </div>
+            <div class="mt-4">
+                <h2 class="fw-bold text-danger">
+                    Question 2 : What is the difference between Global scope and Block scope?
+                </h2>
+                <h4>
+                    <span class="fs-2 fw-bold">Ans : </span> Variables declared Globally (outside any function) have
+                    Global Scope.
+                    Global variables can be accessed from anywhere in a JavaScript program.This is call as Global
+                    scope.<br>
+                    let,const is block scope variable.There are the feature of ES6.let and const cannot be declare
+                    outside of the function or its block.This is call as block scope.
+                </h4>
+            </div>
+            <div class="mt-4">
+                <h2 class="fw-bold text-danger">
+                    Question 3 : How does Event loop works?
+                </h2>
+                <h4>
+                    <span class="fs-2 fw-bold">Ans : </span> JavaScript has a runtime model based on an event loop,
+                    which is responsible for executing the code, collecting and processing events, and executing queued
+                    sub-tasks. This model is quite different from models in other languages like C and Java.<br>
+                    Ganerally,The event loop works by making a request to some internal or external "event provider"
+                    (that generally blocks the request until an event has arrived), then calls the relevant event
+                    handler ("dispatches the event").Each message is processed completely before any other message is
+                    processed.
+
+                </h4>
+            </div>
+            <div class="mt-4">
+                <h2 class="fw-bold text-danger">
+                    Question 4 : How many types we can get undefined?
+                </h2>
+                <h4>
+                    <span class="fs-2 fw-bold">Ans : </span>There are many reason we get undefined.Some are given below
+                    : <br>
+                    1.When we call a variable before initialize.<br>
+                    2.function call without return.<br>
+                    3.If return has nothing.<br>
+                    4.Call a property of object but the property is not there.<br>
+                    5.Search on an array with a number greater than index of the array.<br>
+                    6.If don't pass parameter in a function.
+                </h4>
             </div>
         </div>
     </section>
