@@ -8,6 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
+
 let startTime;
 let questionText = "";
 
@@ -42,6 +43,9 @@ const typeController = (e) => {
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
+  if (newLetterCorrect === false) {
+    errorCount++;
+  }
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
