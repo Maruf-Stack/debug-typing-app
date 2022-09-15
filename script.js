@@ -133,10 +133,7 @@ startBtn.addEventListener("click", start);
 displayHistory();
 
 // Show typing time spent
-// setInterval(() => {
-//   const currentTime = new Date().getSeconds();
-//   document.getElementById("show-time").innerText = `${startTime ? currentTime : 0} seconds`;
-// }, 1000);
+
 
 setInterval(() => {
   const currentTime = new Date().getTime();
